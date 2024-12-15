@@ -1,0 +1,27 @@
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": true,
+      "name": "tokenAddress",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "indexed": false,
+      "name": "symbol",
+      "type": "string"
+    },
+    {
+      "indexed": false,
+      "name": "decimals",
+      "type": "uint8"
+    }
+  ],
+  "name": "TokenDeployed",
+  "type": "event"
+}

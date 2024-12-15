@@ -1,0 +1,25 @@
+[rpc_endpoints]
+op_chain_a = "http://127.0.0.1:9545"
+op_chain_b = "http://127.0.0.1:9546"
+
+[profile.default]
+src = "src"
+script = "scripts"
+out = "out"
+libs = ["lib"]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+fs_permissions = [
+  { access='read', path='./configs' },
+  { access='read', path='./test' },
+  { access='write', path='./deployment.json' }
+]
+
+remappings = [
+  "@contracts-bedrock/=lib/optimism/packages/contracts-bedrock/src/",
+  "@solady/=lib/optimism/packages/contracts-bedrock/lib/solady/src/",
+  "@openzeppelin/contracts-v5=lib/optimism/packages/contracts-bedrock/lib/openzeppelin-contracts-v5/contracts/",
+  "@openzeppelin/contracts/=lib/optimism/packages/contracts-bedrock/lib/openzeppelin-contracts/contracts/",
+  "@solady-v0.0.245/=lib/optimism/packages/contracts-bedrock/lib/solady-v0.0.245/src/"
+]
